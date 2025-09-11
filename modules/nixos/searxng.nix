@@ -1,15 +1,15 @@
 {
- pkgs, 
- ...
-}:{
+  pkgs,
+  ...
+}:
+{
   environment.systemPackages = with pkgs; [
     searxng
   ];
   services.searx = {
     enable = true;
 
-
-    settings = { 
+    settings = {
 
       general = {
         donation_url = false;
@@ -21,8 +21,17 @@
       server.port = 8888;
       server.bind_address = "0.0.0.0";
       server.secret_key = "wu%GrY4YWlj%er@TlV1NDEVl4hSPuLM9dx0";
-    }
-    ;
+
+      enabled_plugins = [
+        "Basic Calculator"
+        "Hash plugin"
+        "Tor check plugin"
+        "Open Access DOI rewrite"
+        "Hostnames plugin"
+        "Unit converter plugin"
+        "Tracker URL remover"
+      ];
+    };
   };
 
 }

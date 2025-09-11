@@ -86,11 +86,6 @@ in
       excludePackages = [ pkgs.xterm ];
     };
 
-    logind.extraConfig = ''
-      HandlePowerKey=ignore
-      HandleLidSwitch=suspend
-      HandleLidSwitchExternalPower=ignore
-    '';
   };
 
   programs = {

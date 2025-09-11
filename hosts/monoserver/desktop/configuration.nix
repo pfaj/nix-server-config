@@ -9,21 +9,20 @@ let
   inherit (inputs) self;
 in
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ]
-    ++ (with self.nixosModules; [
-      common
-      # nvidia
-      ssh
-      # ollama
-      searxng
-      tailscale
-      immich
-      cryptpad
+  imports = [
+    ./hardware-configuration.nix
+  ]
+  ++ (with self.nixosModules; [
+    common
+    # nvidia
+    ssh
+    # ollama
+    searxng
+    tailscale
+    immich
+    cryptpad
 
-    ]);
+  ]);
 
   boot = {
     kernelPackages = lib.mkForce pkgs.linuxPackages_latest;
@@ -33,9 +32,6 @@ in
       efi.canTouchEfiVariables = true;
     };
   };
-
-  hardware.logitech.wireless.enable = true;
-  hardware.logitech.wireless.enableGraphical = true;
 
   services.xserver.displayManager.lightdm.enable = false;
 
