@@ -14,9 +14,7 @@ in
   ]
   ++ (with self.nixosModules; [
     common
-    # nvidia
     ssh
-    # ollama
     searxng
     tailscale
     immich
