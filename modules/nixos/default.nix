@@ -1,4 +1,6 @@
 {
+  kimai = import ./kimai.nix;
+  kavita = import ./kavita.nix;
   adb = import ./adb.nix;
   audio = import ./audio.nix;
   core = import ./core;
