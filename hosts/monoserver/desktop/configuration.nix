@@ -19,6 +19,8 @@ in
     tailscale
     immich
     cryptpad
+    kavita
+    activitywatch
 
   ]);
 
@@ -57,7 +59,7 @@ in
     hostName = "${username}-desktop-nixos";
     firewall = {
       allowedTCPPorts = [ 25565 ];
-      allowedUDPPorts = [ ];
+      allowedUDPPorts = [ 24454 ];
     };
   };
 
@@ -75,6 +77,8 @@ in
 
   systemd.tmpfiles.rules = [
     "d /data 0777 root root -"
+    "d /data/immich/ 0777 root root -"
+    "d /data/kavita/ 0777 root root -"
   ];
 
   # services = {
