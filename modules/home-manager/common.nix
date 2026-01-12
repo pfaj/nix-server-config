@@ -20,6 +20,7 @@
     # custom scripts
     editconf
     rmshit # bypasses homemanager bug
+    colgarb
 
   ];
 
