@@ -13,14 +13,17 @@ in
     ./hardware-configuration.nix
   ]
   ++ (with self.nixosModules; [
+    caddy
+    acme
+
     common
     ssh
     searxng
     tailscale
     immich
     cryptpad
-    kavita
-    activitywatch
+    # nextcloud
+    # kavita
 
   ]);
 
