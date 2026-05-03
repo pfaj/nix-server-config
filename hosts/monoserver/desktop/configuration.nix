@@ -84,6 +84,9 @@ in
     "d /data/kavita/ 0777 root root -"
   ];
 
+  systemd.settings.Manager.RuntimeWatchdogSec = "20s";
+  systemd.settings.Manager.RebootWatchdogSec = "5m";
+
   # services = {
   #   syncthing.settings = {
   #     devices = {
