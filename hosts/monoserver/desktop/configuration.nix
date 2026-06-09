@@ -22,6 +22,7 @@ in
     tailscale
     immich
     cryptpad
+    # vaultwarden
     # nextcloud
     # kavita
 
